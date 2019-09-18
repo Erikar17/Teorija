@@ -23,7 +23,7 @@ public class IerakstisanaFaila {
 			//true - norāda, ka datnes saturu ir jāpapildina (parametrs APPEND)
 			fw = new FileWriter(file, true);
 			fw.write("Šis ir piemērs\nsatura ierakstīšanai failā!\n");
-			String text = "lskdjfskldf";
+			String text = "lskdjfskldf[";
 			fw.write(text + "\n");
 			fw.flush();
 			
