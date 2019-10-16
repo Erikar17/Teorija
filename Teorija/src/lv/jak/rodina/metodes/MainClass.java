@@ -3,7 +3,9 @@ package lv.jak.rodina.metodes;
 public class MainClass {
 		
 	public static void main(String[] args) {
-		Metodes m = new Metodes();
+	
+		
+		/*	Metodes m = new Metodes();
 		//metožu izsaukšana jeb startēšana
 		m.izvaditTekstu();
 		
@@ -11,6 +13,7 @@ public class MainClass {
 		System.out.println("Atgrieztā vērtība" + x);
 		
 		m.parametruMetode(15, 256.5);
-		
+		*/
+		System.out.println(RekursivaMetode.skaitluVirkne(10));
 	}
 }
