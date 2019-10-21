@@ -3,6 +3,7 @@ package lv.jak.rodina.formas;
 import java.awt.BorderLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.Insets;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
@@ -27,7 +28,7 @@ public class Forma extends JFrame{
 	
 	//apraksta formas parametrus izmantojot konstruktorfunkciju
 	public Forma() {
-		setBounds(2000, 150, 500, 300);
+		setBounds(100, 150, 500, 300);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setTitle("Pirmā Forma");
 		
@@ -54,6 +55,7 @@ public class Forma extends JFrame{
 		topPanel.add(addBTN,  BorderLayout.EAST);
 		
 		c.fill = GridBagConstraints.HORIZONTAL;
+		c.insets = new Insets(-50, -230, 0, -230);
 		c.gridx = 0;
 		c.gridy = 0;
 		
@@ -65,9 +67,11 @@ public class Forma extends JFrame{
 		listedNames = new JList<String>(model);
 		
 		c.fill = GridBagConstraints.HORIZONTAL;
+		c.insets = new Insets(0, -230, 0, -230);
 		c.gridx = 0;
-		c.gridy = 2;
+		c.gridy = 1;
 		
+		panel.add(new JScrollPane(listedNames), c);
 		
 		//-- beigas formas centram
 		
@@ -75,11 +79,14 @@ public class Forma extends JFrame{
 		JPanel bottomPanel = new JPanel(new BorderLayout());
         clearBTN = new JButton("Clear");
         
-        bottomPanel.add(clearBTN, BorderLayout.NORTH);
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.insets = new Insets(0, -230, -80, -230);
+		c.gridx = 0;
+		c.gridy = 2;
         
-		panel.add(topPanel, BorderLayout.NORTH);
-		panel.add(new JScrollPane(listedNames), BorderLayout.CENTER);
-		panel.add(bottomPanel, BorderLayout.SOUTH);
+        bottomPanel.add(clearBTN, BorderLayout.EAST);
+		
+		panel.add(bottomPanel, c);
 		
 		
 	}
