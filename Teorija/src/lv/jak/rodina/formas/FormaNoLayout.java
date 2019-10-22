@@ -35,16 +35,23 @@ public class FormaNoLayout extends JFrame {
 		panel = new JPanel(null);
 		
 		enterNameL = new JLabel("Enter a name:");
-		enterNameL.setBounds(10, 10, 100, 30);
+		enterNameL.setBounds(10, 10, 80, 30);
 		
 		enterNameTF = new JTextField();
-		enterNameTF.setBounds(120, 10, 260, 30);
+		enterNameTF.setBounds(100, 10, 280, 30);
 		
 		addBTN = new JButton("Add");
-		addBTN.setBounds(390, 10, 60, 30);
+		addBTN.setBounds(390, 10, 80, 30);
+		
+		listedNames = new JList<String>(model);
+		listedNames.setBounds(10, 50, 460, 160);
 		
 		
-		panel.add(enterNameL); panel.add(enterNameTF); panel.add(addBTN);
+		clearBTN = new JButton("Clear");
+		clearBTN.setBounds(390, 220, 80, 30);
+		
+		panel.add(enterNameL); panel.add(enterNameTF); panel.add(addBTN);panel.add(listedNames);panel.add(clearBTN);
+		
 	}
 
 }
